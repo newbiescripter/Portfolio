@@ -3,17 +3,20 @@ body {
     color: white;
 }
 
-.wrapper-main-black{
-    background-color: rgb(15, 15, 15);
-    width: 75%;
-    margin: 0 auto;
-    display: block;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    box-shadow: 5px 10px rgba(0, 0, 0, 0.614);
-    transition: all 0.3s ease-in-out;
+
+.wrapper-main{
+    background-color: rgb(14, 14, 14);
 }
 
-.wrapper-main-black:hover {
-    transform: scale(1.1);
+.link-main {
+    color: white;
+}
+
+.link-main:hover {
+    color: rgb(242, 242, 242);
+}
+
+#search-input {
+    background-color: transparent;
+    color: white;
 }
