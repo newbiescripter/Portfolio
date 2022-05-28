@@ -1,76 +1,107 @@
 <!DOCTYPE html>
 <html lang="en-us">
-    <head>
+    <head id="head-root">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Blythe Thompson's Portfolio Homepage">
         <meta name="author" content="Blythe Thompson">
         <title>Homepage</title>
-        <link rel="stylesheet" type="text/css" href="src/css/darktheme/darktheme.css">
-        <link rel="stylesheet" type="text/css" href="src/css/lightheme/lightheme.css">
-        <link rel="stylesheet" type="text/css" href="src/css/main.css">
+        <link rel="stylesheet" type="text/css" href="/src/css/main.css" id="main-theme-css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
-    <body id="body-white">
+    <body id="root" ondblclick="changeTheme()">
         <header class="container-main">
-            <div class="wrapper-main-white">
-                <div class="text-container-white">
-                    <span class="title-text">Blythe Thompson's</span>
+            <div class="wrapper-main">
+                <div class="text-container">
+                    <span class="title-text inline-block">Blythe Thompson's</span>
                     <span class="sub-title-text">Portfolio</span>
                 </div>
             </div>
         </header>
+        <div class="contaniner-main" id="disclaimer-box">
+            <div class="wrapper-main">
+                <div class="text-container inline-block" style="width:89.9%">
+                    <span class="sub-title-text">Disclaimer: </span>
+                    <span class="regular-text">Double Click Anywhere To Change The Theme</span>
+                </div>
+                <div style="text-align:center;color:red;width:9%;" class="inline-block">
+                    <span class="sub-title-text" style="cursor:pointer;" onclick="deletelement('disclaimer-box')">X</span>
+                </div>
+            </div>
+        </div>
         <div class="container-main">
-            <div class="wrapper-main-white">
-                <div class="text-container-white">
-                    <span class="sub-title-text">About Me</span>
-                    <div class="paragraph-container-white">
-                        <span>I am a self taught full stack developer,</span>
-                        <span>I am from Jacksonville, Flordia.</span>
-                        <span>But currently I live in Lexington, Kentucky.</span>
-                        <span>I see coding as a way to relieve stress,</span>
-                        <span>so for most of my jobs, I don't require any return.</span> 
+            <div class="wrapper-main">
+                <div class="text-container" id="section-container-main">
+                    <br>
+                    <input type="text" id="search-input" placeholder="Search Sections..." onkeyup="keyupsearch()">
+                    <div class="gray-line"></div>
+                    <div class="section-container" id="about-me">
+                        <span class="sub-title-text">About Me</span>
+                        <div class="paragraph-container">
+                            <span>I am a self taught full stack developer,</span>
+                            <span>I am from Jacksonville, Flordia.</span>
+                            <span>But currently I live in Lexington, Kentucky.</span>
+                            <span>I see coding as a way to relieve stress,</span>
+                            <span>so for most of my jobs, I don't require any return.</span> 
+                        </div>
                     </div>
                     <br>
-                    <span class="sub-title-text">Skills</span>
-                    <div class="list-container-white">
-                        <li>Problem Solving</li>
-                        <li>Teamwork/Communication</li>
-                        <li>Reliabilty</li>
-                        <li>Creativity</li>
-                        <li>Time Management</li>
-                        <li>Leadership</li>
+                    <div class="section-container" id="skills">
+                        <span class="sub-title-text">Skills</span>
+                        <div class="list-container">
+                            <li>Problem Solving</li>
+                            <li>Teamwork/Communication</li>
+                            <li>Reliabilty</li>
+                            <li>Creativity</li>
+                            <li>Time Management</li>
+                            <li>Leadership</li>
+                        </div>
                     </div>
                     <br>
-                    <span class="sub-title-text">Contact</span>
-                    <div class="paragraph-container-white">
-                        <span>Email: blythethompson0711@gmail.com</span>
-                        <span>Phone: (502)905-9801</span>
-                        <span>Discord: whitescreen#7311</span>
-                        <span>Github: NewbieScripter</span>
+                   <div class="section-container" id="contact-info">
+                        <span class="sub-title-text">Contact</span>
+                        <div class="paragraph-container">
+                            <span>Email: blythethompson0711@gmail.com</span>
+                            <span>Phone: (502)905-9801</span>
+                            <span>Discord: whitescreen#7311</span>
+                            <span>Github: NewbieScripter</span>
+                        </div>
                     </div>
                     <br>
-                    <span class="sub-title-text">Links</span>
-                    <div class="paragraph-container-white">
-                        <span>Github: <a target="_blank" href="https://github.com/newbiescripter" class="link-main-white">https://github.com/newbiescripter</a></span>
+                    <div class="section-container" id="links">
+                        <span class="sub-title-text">Links</span>
+                        <div class="paragraph-container">
+                            <span>Github: <a target="_blank" href="https://github.com/newbiescripter" class="link-main-white">https://github.com/newbiescripter</a></span>
+                        </div>
                     </div>
                     <br>
-                    <span class="sub-title-text">Projects</span>
-                    <div class="list-container-white">
-                        <li>EazyGame (In Progress)</li>
-                        <li>This Portfolio</li>
-                        <li>10 Other Private Projects</li>
+                    <div class="section-container" id="projects">
+                        <span class="sub-title-text">Projects</span>
+                        <div class="list-container">
+                            <li>EazyGame (In Progress)</li>
+                            <li>This Portfolio</li>
+                            <li>10 Other Private Projects</li>
+                        </div>
+                    </div>
+                    <div class="section-container-special" id="no-results-found">
+                        <span class="sub-title-text" style="color:red;">No Results Found</span>
+                        <div class="text-container">
+                            <span style="cursor:pointer;" onclick="clearinput()">Please Try Again</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
         <footer class="container-main">
-            <footer class="wrapper-main-white">
-                <div class="text-container-white">
+            <footer class="wrapper-main">
+                <div class="text-container">
                     <span class="sub-title-text">© Blythe Thompson 2022</span>
                 </div>
             </footer>
         </footer>
+        <script type='text/javascript' src="/src/js/stylemanager.js"></script>
+        <script type="text/javascript" src="/src/js/sectionmanager.js"></script>
     </body>
 </html>
+   
