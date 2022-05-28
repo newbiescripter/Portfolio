@@ -1,5 +1,91 @@
+html {
+    overflow: auto;
+}
+
 body {
     font-family: system-ui;
+    transition: 0.3s ease-in-out;
+}
+
+.wrapper-main{
+    width: 75%;
+    margin: 0 auto;
+    display: block;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    border-radius: 15px;
+    box-shadow: 2.5px 5px rgba(0, 0, 0, 0.614);
+    transition: all 0.3s ease-in-out;
+}
+
+.paragraph-container {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.list-containers li:hover {
+    text-decoration: underline;
+}
+
+.link-main {
+    text-decoration: none;
+}
+
+.link-main:hover {
+    text-decoration: underline;
+}
+
+.list-container li {
+    font-size: 1.75vw;
+    font-weight: 500;
+    display: list-item;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+}
+
+.list-container {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#header-two {
+    width: 74.9%;
+}
+
+#header-one {
+    width: 24.9%;
+}
+
+.paragraph-container span {
+    font-size: 1.75vw;
+    font-weight: 500;
+    display: block;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.paragraph-container span:hover {
+    text-decoration: underline;
+}
+
+.wrapper-main:hover {
+    transform: scale(1.05);
+}
+
+.text-container span {
+    display: block;
+}
+
+.text-container {
+    text-align: center;
+    align-items: center;
+    align-content: center;
 }
 
 .container-main {
@@ -14,12 +100,12 @@ body {
 
 .title-text {
     font-weight: 700;
-    font-size: 25px;
+    font-size: 4.25vw;
 }
 
 .sub-title-text {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 3.25vw;
 }
 
 .underline {
@@ -30,3 +116,23 @@ body {
     display: inline-block;
 }
 
+.gray-line {
+    width: 75%;
+    background-color: gray;
+    height: 1px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#search-input {
+    width: 75%;
+    height: 5vw;
+    border-radius: 15px;
+    background-color: tra;
+    display: block;
+    margin: 0 auto;
+    border: 3px gray;
+    transition: 0.3s ease-in-out;
+}
